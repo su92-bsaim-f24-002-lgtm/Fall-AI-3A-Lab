@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic AI App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Titanic Survival Predictor</h1>
+
+<form method="POST">
+
+    <input type="number" name="pclass" placeholder="Class (1,2,3)" required>
+
+    <select name="sex" required>
+        <option value="">Select Gender</option>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+    </select>
+
+    <input type="number" step="0.1" name="age" placeholder="Age" required>
+
+    <input type="number" step="0.1" name="fare" placeholder="Fare" required>
+
+    <select name="embarked" required>
+        <option value="">Embarked Port</option>
+        <option value="0">C</option>
+        <option value="1">Q</option>
+        <option value="2">S</option>
+    </select>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+{% if output %}
+<h2>{{ output }}</h2>
+{% endif %}
+
+</body>
+</html>
