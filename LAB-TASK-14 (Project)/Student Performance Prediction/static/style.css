@@ -1,0 +1,115 @@
+/* Layout Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Page background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main card */
+.container {
+    background: #ffffff;
+    width: 400px;
+    padding: 25px 30px;
+    border-radius: 14px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input container */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102,126,234,0.6);
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover button */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Result box */
+.result {
+    margin-top: 20px;
+    background: #e9f0ff;
+    padding: 12px;
+    text-align: center;
+    border-left: 5px solid #667eea;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #333;
+    animation: pop 0.6s ease;
+}
+
+/* Footer text */
+.footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: gray;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
